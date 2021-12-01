@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/styles/styles.css">
+    </head>
+
+    <body>
+        <div id="helpcontainer">
+            <div id="navbar">
+                <div id="navbar-items">
+                    <div class="navbar-item"><a href="map.html">Map</a></div>
+                    <div class="navbar-item"><a href="about.html">About</a></div>
+                    <div class="navbar-item"><a href="help.html">Help</a></div>
+                </div>                
+            </div>
+            <div class="line">
+                <img src="assets/images/menu_bar.png" class="line">
+            </div>       
+            
+            <div id="qanda">Q&A</div>
+
+            <button class="question">Why American Bytes?</button>
+                <div class="answer">
+                <p>For me, food has always been something that brings people together. Currently, the US is more divided than ever, but maybe by sharing in the things that we all enjoy we can become more harmonious.</p>
+                </div>
+            <br>
+            <button class="question">What is your favorite state dish?</button>
+            <div class="answer">
+              <p>Oh man thats a tough one! For the emotional attachment, it has got to be Spam Musubi. As a broke college student, my roommates and I buy these massive 20 packs of spam, so many night have I have been sustained with spam musubi.</p>
+            </div>
+            <br>
+            <button class="question">Where did you source your information?</button>
+            <div class="answer">
+              <p>A lot of the information comes from my own lived experience. My parents used to travel a lot for conferences, so I would tag along when I was younger and eat food in a lot of interesting places. Thus, a lot of these are just my personal favorites from the places I've been. To supplement this, I got information from local blogs as well as the Food Network.</p>
+            </div>
+            <br>
+            <button class="question">How did you decide on a dish for each state?</button>
+            <div class="answer">
+              <p>This is where I got to assert my privilege as the creater of this website! While I was sure to stay true to the heart of this project and pick a dish representative of the state, with something as diverse as food there is always a little wiggle room to insert your own personal preference. Thus, once I had narrowed down a set of valid choices from my research, I just chose whichever one I liked best.</p>
+            </div>
+        </div>
+        <script>
+            var coll = document.getElementsByClassName("question");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+            </script>
+    </body>
+</html>

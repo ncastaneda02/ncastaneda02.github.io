@@ -1,0 +1,393 @@
+html,body{margin:0;padding:0;overflow:hidden;background-color: #8DDCF9;}
+
+#states {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+}
+
+#qanda {
+    position: relative;
+    font-size: 60pt;
+    font-family: 'Varela Round', sans-serif;
+    color: #f8f8f8;
+    left: 5%;
+    padding-bottom: 3%;
+}
+
+#navbar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    background: #8DDCF9;
+}
+
+.question {
+    position: relative;
+    background-color: #4EDA7A;
+    color: #F8F8F8;
+    cursor: pointer;
+    padding: 18px;
+    width: 70%;
+    border-radius: 25px;
+    text-align: left;
+    left: 15%;
+    outline: none;
+    font-size: 30pt;
+    font-family: 'Varela Round', sans-serif;
+  }
+  
+  .active, .question:hover {
+    background-color: #3EAE61;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+  }
+  
+  .question:after {
+    content: '+';
+    color: #f8f8f8;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: '-';
+  }
+  
+  .answer {
+    position: relative;
+    padding: 0 18px;
+    max-height: 0;
+    width: 67.6%;
+    overflow: hidden;
+    left: 15%;
+    transition: max-height 0.2s ease-out;
+    background-color: #4EDA7A;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    color: #F8F8F8;
+    font-size: 24pt;
+    font-family: 'Varela Round', sans-serif;
+
+  }
+
+#navbar-items {
+    position:absolute;
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    height: 100%;
+    width: 42.2%;
+    top: 25%;
+    left: 58%;
+}
+
+#explanation {
+    position: absolute;
+    width: 40%;
+    height: 50%;
+    left: 30%;
+    background-color: #BA9C7F;
+    z-index: 100;
+}
+
+#howitworks {
+    position: absolute;
+    font-family: 'Varela Round', sans-serif;
+    color: #f8f8f8;
+    font-size: 35pt;
+    left: 3%;
+    top: 4%;
+}
+
+#instructions {
+    position: absolute;
+    font-family: 'Varela Round', sans-serif;
+    color: #f8f8f8;
+    font-size: 18pt;
+    width: 95%;
+    left: 5%;
+    top: 20%;
+}
+
+#explanation button {
+    position: absolute;
+    cursor: pointer;
+    width: 30%;
+    height: 15%;
+    left: 35%;
+    top: 80%;
+    background-color: #3EAE61;
+    font-family: 'Varela Round', sans-serif;
+    color: #f8f8f8;
+    font-size: 25pt;
+} 
+
+.line {
+    position: relative;
+    width: 59%;
+    height: 5%;
+    left: 39%;
+    top: 2%;
+    margin-bottom: 2%;
+}
+
+.navbar-item {
+    position: relative;
+    font-family: 'Varela Round', sans-serif;
+    color: #f8f8f8;
+    font-size: 35pt;
+    padding-left: 12%;
+}
+
+.earth {
+    position: absolute;
+    height: 75%;
+    width: 52%;
+    top: 18%;
+    left: 25%;
+    right: 0;
+    bottom: 0;
+}
+
+.aboutme {
+    position: absolute;
+    display: inline-block;
+    left: 25%
+}
+
+.typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 5pt solid black;
+    margin: 0 auto;
+    letter-spacing: 5pt;
+    font-size: 50pt;
+    font-family: 'Varela Round', sans-serif;
+    color:rgb(37, 35, 35);
+    -webkit-text-stroke: 0.5px black;
+    animation:
+        typing 2.5s steps(40, end),
+        blinking .54s step-end infinite;
+}
+
+#aboutmetext {
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    width: 80%;
+    font-size: 25pt;
+    font-family: 'Varela Round', sans-serif;
+    color: rgb(37, 35, 35);
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blinking {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: black;
+    }
+}
+
+div#text {
+    position: absolute;
+    left: 31%;
+    top: 16%;
+    color: #f8f8f8;
+    padding: 10px 20px;
+    font-size: 60pt;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.state:hover {
+    fill:#3EAE61;
+    cursor: pointer;
+}
+
+#container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #8DDCF9;
+}
+
+#helpcontainer {
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #8DDCF9;
+}
+
+#map-container {
+    position: relative;
+    width: 100%;
+    height: 83%;
+}
+
+
+a {
+    text-decoration: none;
+    color: #f8f8f8;
+}
+
+.description-container {
+    position: absolute;
+    width: 30%;
+    border-radius: 20px;
+    height: 50%;
+    top: 6%;
+    left: 5%;
+    background-color: #BA9C7F;
+    display: none;
+    z-index: 101;
+}
+
+.state-name {
+    position: absolute;
+    width: 70%;
+    font-size: 30pt;
+    top: 5%;
+    left: 5%;
+    font-family: 'Varela Round', sans-serif;
+    color: #f8f8f8;
+
+}
+
+.description {
+    position: absolute;
+    width: 90%;
+    font-size: 15pt;
+    top: 24%;
+    left: 5%;
+    font-family: 'Varela Round', sans-serif;
+    color: #f8f8f8;
+}
+
+.image {
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    font-size: 15pt;
+    top: 5%;
+    left: 5%;
+}
+
+.view-image, .view-description {
+    position: absolute;
+    top: 84%;
+    width: fit-content;
+    height: 10%;
+    left: 56%;
+    text-align: center;
+    justify-content: center;
+    font-size: 20pt;
+    font-family: 'Varela Round', sans-serif;
+    color: #f8f8f8;
+    z-index: 1000;
+}
+
+.view-description {
+    left: 14%;
+}
+
+.right-button, .left-button {
+    position: absolute;
+    top: 85%;
+    width: 6%;
+    height: 8%;
+    left: 5%;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.right-button {
+    left: 90%;
+}
+
+.btn {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+    z-index: 102;
+}
+
+#texas {}
+#montana {}
+#california {}
+#nevada {}
+#new_mexico {}
+#wyoming {}
+#arizona {}
+#michigan {}
+#oregon {}
+#colorado {}
+#minnesota {}
+#wisconsin {}
+#missouri {}
+#oklahoma {}
+#north_dakota {}
+#south_dakota {}
+#kansas {}
+#washington {}
+#nebraska {}
+#utah {}
+#idaho {}
+#florida {}
+#iowa {}
+#new_york {}
+#illinois {}
+#arkansas {}
+#georgia {}
+#alabama {}
+#north_carolina {}
+#ohio {}
+#kentucky {}
+#pennyslvania {}
+#virginia {}
+#louisiana {}
+#mississippi {}
+#tennessee {}
+#indiana {}
+#maine {}
+#south_carolina {}
+#west_virginia {}
+#maryland {}
+#massachusetts {}
+#vermont {}
+#new_hampshire {}
+#new_jersey {}
+#connecticut {}
+#delaware {}
+#hawaii {}
+#rhode_island {}
+#alaska {}
